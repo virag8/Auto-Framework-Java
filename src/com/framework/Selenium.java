@@ -68,10 +68,6 @@ public class Selenium {
 
 	}
 
-	public static void main(String[] args) {
-		Screenshot();
-	}
-
 	public static File Screenshot() {
 		File destFile = null;
 		String pattern = "dd-MMM-yyyy-H-m-s";
@@ -81,7 +77,7 @@ public class Selenium {
 		try {
 			File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 			try {
-				destFile = new File("SeleniumDriver_screenshot_" + date + ".png");
+				destFile = new File("test-output/SeleniumDriver_screenshot_" + date + ".png");
 				Files.move(screenshotFile, destFile);
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
