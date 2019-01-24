@@ -27,6 +27,7 @@ hs_err_pid*
 .settings
 .classpath
 .metadata
+.idea
 test-output
 bin
 target
