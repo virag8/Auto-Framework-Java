@@ -23,6 +23,15 @@ Feature: Title of your feature
   @tag1
   Scenario: Title of your scenario
     Given I have opened google home page
-    When I search a text
+    When I search a "pune" text
     Then I validate the outcomes
 
+  @tag2
+  Scenario Outline: Title of your scenario for outline
+    Given I have opened google home page
+    When I search a "<searchText>" text
+    Then I validate the outcomes
+    Examples:
+    |searchText|
+    | Pune     |
+    |   ^%#@*! |

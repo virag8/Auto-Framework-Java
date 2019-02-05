@@ -55,7 +55,6 @@ public class Selenium {
 			element = wait.until(ExpectedConditions.elementToBeClickable(by));
 
 		} finally {
-			// TODO: handle finally clause
 			sw.stop();
 			if (element != null) {
 				MyLogger.write(LogLevel.DEBUG,
@@ -80,11 +79,9 @@ public class Selenium {
 				destFile = new File("test-output/SeleniumDriver_screenshot_" + date + ".png");
 				Files.move(screenshotFile, destFile);
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		} catch (WebDriverException w) {
-			// TODO: handle exception
 		}
 
 		return destFile;
