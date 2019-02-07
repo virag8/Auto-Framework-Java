@@ -19,6 +19,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import com.google.common.base.Stopwatch;
 import com.google.common.io.Files;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class Selenium {
 	public static int timeoutSec = 5;
 
@@ -26,7 +28,8 @@ public class Selenium {
 
 	public static WebDriver chromelaunch() {
 
-		System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
+		// System.setProperty("webdriver.chrome.driver", "resources/chromedriver_mac");
+		WebDriverManager.chromedriver().setup();
 
 		driver = new ChromeDriver();
 		System.out.println("driver launched: " + driver);
