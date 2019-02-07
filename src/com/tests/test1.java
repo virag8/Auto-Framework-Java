@@ -11,6 +11,8 @@ import com.framework.LogLevel;
 import com.framework.MyLogger;
 import com.framework.Selenium;
 
+import pageFactory.GoogleHomePage;
+
 public class test1 {
 
 	@BeforeClass
@@ -28,7 +30,8 @@ public class test1 {
 	public void testSearchTextScenario() throws FrameworkException {
 		try {
 			System.out.println("testSearchTextScenario");
-			searchActions.search("Pune");
+			// searchActions.search("Pune");
+			new GoogleHomePage().search("Pune");
 			MyLogger.write(LogLevel.INFO, "testSearchTextScenario");
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

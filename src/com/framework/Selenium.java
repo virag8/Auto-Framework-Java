@@ -27,6 +27,7 @@ public class Selenium {
 	public static WebDriver chromelaunch() {
 
 		System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
+
 		driver = new ChromeDriver();
 		System.out.println("driver launched: " + driver);
 		return driver;
