@@ -33,6 +33,7 @@ public class Selenium {
 
 		driver = new ChromeDriver();
 		System.out.println("driver launched: " + driver);
+
 		return driver;
 	}
 
@@ -45,13 +46,12 @@ public class Selenium {
 		Stopwatch sw = Stopwatch.createStarted();
 		WebElement element = null;
 		try {
-			while (driver.findElements(by).size() == 0) {
+			while (driver.findElements(by).isEmpty()) {
 				try {
 					Thread.sleep(1000);
 					if (sw.elapsed(TimeUnit.SECONDS) > timeoutSec)
 						return null;
 				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}
@@ -71,7 +71,7 @@ public class Selenium {
 
 	}
 
-	public static File Screenshot() {
+	public static File screenshot() {
 		File destFile = null;
 		String pattern = "dd-MMM-yyyy-H-m-s";
 		SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);

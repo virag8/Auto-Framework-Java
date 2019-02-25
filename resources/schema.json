@@ -1,0 +1,25 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Product",
+    "description": "A product from the catalog",
+    "type": "object",
+    "properties": {
+        "size": {
+            "description": "The unique identifier for a product",
+            "type": "integer"
+        },
+        "parse_time_nanoseconds": {
+            "description": "The unique identifier for a product",
+			"type": "integer"
+        },
+		"object_or_array": {
+            "description": "Name of the product",
+            "type": "string"
+        },       
+		"validate": {
+            "description": "The unique identifier for a product",
+			"type": "boolean"
+        }
+    },
+    "required": ["size", "parse_time_nanoseconds", "object_or_array", "validate", "empty"]
+}

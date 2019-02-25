@@ -3,6 +3,7 @@
 <suite name="Suite">
 <listeners>
 <listener class-name="com.epam.reportportal.testng.ReportPortalTestNGListener"></listener>
+<listener class-name="com.framework.Listeners"></listener>
 </listeners>
   <test thread-count="5" name="Test">
     <classes>

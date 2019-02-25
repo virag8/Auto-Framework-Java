@@ -19,7 +19,7 @@ public class MyLogger {
 		// String screenshot_file_path = "resources/Holiday_Pune_2019.jpg";
 		ReportPortalMessage message = null;
 		try {
-			File destFile = Selenium.Screenshot();
+			File destFile = Selenium.screenshot();
 			if (destFile == null)
 				message = new ReportPortalMessage(rp_message);
 			else
